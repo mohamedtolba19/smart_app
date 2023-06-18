@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require("mongoose");
+const cors = require('cors');
 const app = express()
+app.use(cors())
 const port = 3003 || process.env.PORT
 
 app.get('/', (req, res) => res.send('Hello World!'))
