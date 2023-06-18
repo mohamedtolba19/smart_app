@@ -40,7 +40,7 @@ module.exports.signin = async(req,res)=>
         if(match)
         {
             const token = jwt.sign({ first_name:user.first_name , last_name:user.last_name , email:user.email , age : user.age , password : user.password}, 'movie');
-            res.json({message:"sccess" , token})
+            res.json({message:"success" , token})
         }
         else
         {
